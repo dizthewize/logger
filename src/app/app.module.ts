@@ -7,7 +7,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogFormComponent } from './components/log-form/log-form.component';
 import { LogsComponent } from './components/logs/logs.component';
-import { LogService } from './services/log.service'
+import { LogService } from './services/log.service';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './components/home/home.component'
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -15,11 +18,14 @@ import { LogService } from './services/log.service'
     AppComponent,
     NavbarComponent,
     LogFormComponent,
-    LogsComponent
+    LogsComponent,
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [LogService],
   bootstrap: [AppComponent]
